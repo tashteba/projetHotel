@@ -1,0 +1,20 @@
+.btnHeadHome {
+    text-align: center;
+    width: 70%;
+    margin-left: 15%;
+    height: 50px;
+    border: 0.1px solid rgba(250, 250, 250, 0.681);
+    background-color: transparent;
+    color: white;
+    letter-spacing: 4px;
+
+}
+
+@media screen and (max-width: 600px) {
+    .btnHeadHome{
+        height: 30px;
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+    }
+  

@@ -1,0 +1,681 @@
+body {
+    background-color: #222222;
+}
+
+main {
+width: 75%;
+margin-left: 25%;
+}
+
+
+// css de head 
+
+.container {
+    height: 100%;
+    margin: auto;
+    width: 100%;
+   
+}
+.contenuContainer {
+    color: aliceblue;
+    height: auto;
+    width: auto;
+    margin: auto;
+}
+
+.containerSlider {
+    position:absolute;
+    top: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 150px;
+    color: rgb(250, 250, 250);
+    width: 30%;
+    margin-left: 20%;
+    gap: 50px;
+    height: auto;
+    }
+
+#slider {
+    position: relative;
+    width: 99.5%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+#slide{
+    width: 100%;
+    height: auto;
+}
+
+#precedent, #suivant {
+    position: absolute;
+    font-size: 100px;
+    background-color:rgba(0, 0, 0, 0.762);
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease ;
+
+}
+#precedent {
+    display: none;
+    // left: 0;
+}
+#suivant {
+    display: none;
+    // right: 0;
+}
+#slider:hover #precedent,#slider:hover #suivant {
+    opacity: 1;
+}
+
+.title2HeadHome{
+    font-weight:lighter;
+    letter-spacing: 3px;
+}
+
+.titleHeadHome {
+    font-size: 40px;
+    letter-spacing: 10px;
+}
+.fa{
+    color: gold;
+    letter-spacing: 10px;
+}
+
+.extenstion{
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-evenly;
+    background-color: rgb(67, 66, 66);
+    width: 100%;
+    height: 100%;
+}
+
+.extenstionLeft {
+    text-align: start;
+    padding : 5% 0 5% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+}
+.title2ExtenstionHome{
+    color: rgb(145, 124, 11);
+}
+
+.titleExtenstionHome {  
+    color: white
+}
+.paraExtenstionHome {
+    color: $colorParagraph;
+}
+
+.extenstionRight{
+    padding : 5% 5% 5% 0;
+    width: 40%;
+    display: flex;
+}
+
+.imgExtenstionLeft,.imgExtenstionRight{
+    margin-top: 10%;
+    width: 40%;
+    height: 65%;
+}
+.imgExtenstionLeft {
+    margin: 8%;
+    padding-top: 4%;
+    display: flex;
+    align-self: center;
+
+}
+.imgExtenstionRight{
+    margin : 5%;
+    display: flex;
+    align-self: flex-start;
+
+}
+
+
+
+/* contenu principal */
+
+%container-accueil {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+%container-location {
+    padding: 0% 0% 5% 5%;
+    height: 100%;
+    width: 90%;
+}
+
+%légende {
+    position: absolute;
+    bottom: 9%;
+    padding-left: 5%;
+}
+
+%titrewhite {
+    font-family: 'Gilda Display', serif;
+    color: white;
+}
+
+%textgrey {
+    font-family: 'Barlow Condensed', serif;
+    color: rgb(186, 186, 186);
+    margin: 0;
+}
+
+%textgold {
+    font-family: 'Barlow Condensed', serif;
+    color: #816d2b;
+}
+
+%item {
+    background-color: #2b2b2b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 5%;
+    padding-bottom: 7%;
+    padding-top: 5%;
+  }
+
+
+
+/* CONTAINER 1 */
+
+.container-accueil1 {
+    background-color: #1e1e1e;
+    @extend %container-accueil;
+
+}
+
+.titre1 {
+    @extend %titrewhite;
+    width: 90%;
+    padding: 3% 0% 1% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    p {
+        @extend %textgold;
+        font-weight: 500;
+        font-size: 1.7em;
+        margin-top: 5%;
+        margin-bottom: 0%;
+    }
+
+    h2 {
+        @extend %titrewhite;
+        font-size: 50px;
+        margin-top: 2%;
+        margin-bottom: 3%;
+    }
+}
+
+.container1 { 
+    background-color: #1e1e1e;
+    @extend %container-location;
+    margin-bottom: 5%;
+    display: grid;
+    grid-template-columns: repeat(6, 15%); 
+    grid-template-rows: 57% 43%; 
+    gap: 4% 2%;
+    grid-template-areas: 
+      "image1 image1 image2 image2 image3 image3"
+      "image4 image4 image4 image5 image5 image5";
+  }
+
+  .image1 { 
+    grid-area: image1;
+}
+  .image2 { 
+    grid-area: image2;
+}
+  .image3 { 
+    grid-area: image3;
+}
+  .image4 { 
+    grid-area: image4;
+}
+  .image5 { 
+    grid-area: image5;    
+}
+
+figure {
+    position: relative;
+    color: white;
+    height: 100%;
+    margin: 0;
+
+    img {
+        max-width: 100%;
+      }
+
+    .lab1 { /* =prix */
+        position: absolute;
+        font-family: 'Barlow Condensed', serif;
+        color: white;
+        letter-spacing: 4px;
+        font-weight: 500;
+        font-size: 1em;
+        bottom: 20%;
+        left: 5%;
+    }
+
+    .lab2 { /* =prix */
+        position: absolute;
+        font-family: 'Barlow Condensed', serif;
+        color: white;
+        letter-spacing: 4px;
+        font-weight: 500;
+        font-size: 1em;
+        bottom: 31%;
+        left: 5%;
+    }
+    
+    figcaption { /* =chambre */
+        position: absolute;
+        @extend %titrewhite;
+        margin: 0;
+        font-size: 1.7em;
+        bottom: 8%;
+        left: 5%;
+    }
+
+        a {
+            width: 100%;
+            color: white;
+            font-family: 'Barlow Condensed', serif;
+            font-size: 1em;
+            font-weight: 600;
+            text-transform : uppercase;
+            text-decoration:none;
+        }
+    
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.288);
+        }
+
+        .hr1 {
+            position: absolute;
+            background-color: white;
+            width: 15%;
+            height: 1px;
+            border: none;
+            margin-left: 5%;
+            bottom: 6%;
+          }
+
+        .hr2 {
+            position: absolute;
+            background-color: white;
+            width: 15%;
+            height: 1px;
+            border: none;
+            margin-left: 5%;
+            bottom: 12%;
+          }
+    }
+
+
+    .figg1t {
+        position: absolute;
+        width: 100%;
+        bottom: 9%;
+        left: 5%;
+        letter-spacing: 3px;
+    }
+    
+    .figg1b {
+        position: absolute;
+        width: 100%;
+        bottom: 19%;
+        left: 5%;
+        letter-spacing: 3px;
+        font-weight: 500;
+    }
+    
+
+.bouton1t {
+    position: absolute;
+    width: 80px;
+    border: 1px solid white;
+    transform: rotate(-90deg);
+    text-align: center;
+    bottom: 80%;
+    left: 70%;
+    letter-spacing: 3px;
+    padding: 2%;
+}
+
+.bouton1b {
+    position: absolute;
+    width: 80px;
+    border: 1px solid white;
+    transform: rotate(-90deg);
+    text-align: center;
+    bottom: 70%;
+    left: 80%;
+    letter-spacing: 3px;
+    padding: 1.3%;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .container-accueil1 {
+
+        .titre1 h2 {
+            font-size: 200%;
+        }
+        
+        .titre1 p {
+            font-size: 125%;
+        }
+    }
+
+    .container1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .figg1t {
+        font-size: 100%;
+    }
+
+    .figg1b {
+        font-size: 100%;
+    }
+
+    .lab1 {
+        font-size: 100%;
+    }
+
+    .lab2 {
+        font-size: 100%;
+    }
+
+    .bouton1t {
+        padding: 0.8% 0% 0.8% 0%;
+        font-size: 11px;
+        bottom: 77%;
+    }
+
+    .bouton1b {
+        padding: 0.8% 0% 0.8% 0%;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .figg1t {
+        font-size: 100%;
+    }
+
+    .figg1b {
+        font-size: 100%;
+    }
+
+    .lab1 {
+        font-size: 100%;
+    }
+
+    .lab2 {
+        font-size: 100%;
+    }
+
+    .bouton1t {
+        padding: 0.4% 0% 0.4% 0%;
+        font-size: 11px;
+        bottom: 74%;
+        left: 64%;
+    }
+
+    .bouton1b {
+        padding: 0.4% 0% 0.4% 0%;
+        font-size: 11px;
+        bottom: 65%;
+        left: 76%;
+    }
+}
+
+
+
+/* CONTAINER 2 */
+
+
+
+.container-accueil2 {
+    @extend %container-accueil;
+}
+
+.container2 {
+    @extend %container-location;
+    margin-top: 5%;
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 50% 50%; 
+    grid-template-rows: 25% 25% 25% 25%; 
+    gap: 0;
+    grid-template-areas: 
+      "item1 item2"
+      "item3 item4"
+      "item5 item6"
+      "item7 item8";
+    
+    img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .titre-haut {
+        @extend %textgold;
+        font-weight: 500;
+        font-size: 1.5em;
+        text-transform : uppercase;
+        letter-spacing: 3px;
+        margin: 0;
+    }
+    
+    p {
+        @extend %textgrey;
+        font-size: 1.2em;
+        letter-spacing: 1px;
+        line-height: 225%;
+        margin-bottom: 5%;
+    }
+    
+    h3 {
+        @extend %titrewhite;
+        font-size: 2.3em;
+        margin: 0;
+    }
+}
+
+  .item1 { 
+    grid-area: item1;
+}
+  .item2 {
+    grid-area: item2; 
+    @extend %item;
+}
+  .item3 { 
+    grid-area: item3;
+    @extend %item;
+}
+  .item5 { 
+    grid-area: item5;
+}
+  .item4 { 
+    grid-area: item4; 
+}
+  .item6 { 
+    grid-area: item6;
+    @extend %item;
+}
+  .item7 { 
+    grid-area: item7;    
+    @extend %item;
+}
+  .item8 { 
+    grid-area: item8; 
+}
+
+.bouton2 a {
+    background-color: #816d2b;
+    color: white;
+    font-family: 'Barlow Condensed', serif;
+    font-size: 1.5em;
+    text-transform : uppercase;
+    font-weight: 400;
+    text-decoration:none;
+    padding: 2% 4% 2% 4%;
+
+    &:hover {
+        background-color:#ebc855;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .container-accueil2 {
+        height: 70%;
+    }
+
+    .container2 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        div {
+            height: 50%;
+        }
+
+        img {
+            height: 100%;
+        }
+
+        h3 {
+            font-size: 175%;
+        }
+
+        .titre-haut {
+            font-size: 100%;
+        }
+      }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .containerSlider{
+        height: 30%;
+        font-size: 20%;
+        text-align: center;
+        margin-left: 20%;
+    }
+    .title2HeadHome{
+        font-size: 14px;
+    }
+   .extenstionRight{
+    display: none;
+   }
+   .footercontenu { padding: auto;
+   }
+   
+  }
+
+@media screen and (max-width: 600px) {
+    .title2HeadHome  {
+      font-size: 16px;
+    }
+    .titleHeadHome{
+        font-size: 20px;
+    }
+  
+  .leftSideFooter { font-size: 70%;}
+  .RightSideFooter{
+    font-size: 70%;
+  }
+  .nomeroRightSide{
+    font-size: 18px;
+  }
+}
+
+  @media screen and (max-width: 768px) {
+    .main {
+        width: 100%;
+        // margin-left: 25%;
+        }
+    figcaption {
+        font-size: 10px;
+    }
+    .containerSlider{
+        display: none;
+    }
+    #slider {
+        display: none;
+    }
+    .extenstion {
+        padding-top: 40%;
+        
+  }
+  .extenstionLeft {
+    width: 100%;
+    text-align: center;
+  }
+  
+    .extenstionRight{
+        width: 100%;
+    }
+    .extenstionRight {
+        display: none;
+    }
+    .footercontenu{
+        display: grid;
+        text-align: center;
+        width: 100%;
+        font-size: 1.5em;
+        
+    }
+    .leftSideFooter{
+        display: none;
+    }
+    
+  }
+
+  @media screen and (max-width: 1023px) {
+    .containerSlider {
+        height: 10%;
+        
+    }
+    .leftSideFooter{
+        display: none;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .extenstion {
+        padding-top: 100%;
+  }
+}
+
+
+
+
+/* voir: cours responsive */

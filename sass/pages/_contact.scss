@@ -1,0 +1,321 @@
+body {
+    background-color: #222222;
+}
+
+.mainPrin {
+    background-color: rgb(41, 41, 41);
+    width: 75%;
+    margin-left: 25%;
+    padding-top: 5%;
+}
+
+
+/* -- emplacements des extends-- */
+
+%textgrey {
+    color: #BABABA;
+    font-size: 1em;
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+
+%flaticons {
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .informations p {
+    font-size: 18px;
+    margin-right: 20px;
+  }
+  
+  .flaticon-phone:before {
+    content: "\f3e0";
+    font-family: "Flaticon";
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  /* styles pour l'e-mail */
+  .mail {
+    margin-bottom: 20px;
+  }
+  
+  .mail h6 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .flaticon-envelope:before {
+    font-family: "Flaticon";
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  #email {
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid #000;
+    margin-right: 10px;
+    width: 200px;
+  }
+  
+  /* styles pour l'adresse */
+  .adresse {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .adresse h6 {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .adresse p {
+    font-size: 18px;
+    margin-right: 20px;
+  }
+  
+  .flaticon-location-pin:before {
+    font-family: "Flaticon";
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  /* styles pour le formulaire de contact */
+  .Contact {
+    margin-bottom: 40px;
+  }
+  
+  .Contact h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .Contact input,
+  .Contact textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Contact input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* styles pour la carte Google Maps */
+  .Map {
+    max-width: 800px;
+    margin-right: 50px ;
+    margin-bottom: 40px;
+}
+
+/* ----- */
+
+
+@media screen and (max-width: 360px) {
+    .box1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+    }
+}
+
+
+section {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h2 {
+    font-family: 'Gilda Display', serif;
+    color: white;
+    font-size: 1.8em;
+    font-weight: normal;
+}
+
+
+
+/* contact page */
+
+@media screen and (max-width: 360px) {
+    .contact-page {
+        margin-top: 125%;
+        max-width: 220px;
+    }
+}
+
+.contact-page {
+    width: 400px;
+    color: #BABABA;
+    font-family: 'Barlow Condensed', serif;
+    font-size: 1.1em;
+
+    h3 {
+        @extend %textgrey;
+        margin: 15% 0% 0% 0%;
+    }
+
+    .description {
+        margin: 7% 0% 0% 0%;
+        font-size: 1em;
+        letter-spacing: 1px;
+        line-height: 175%;
+    }
+
+    .tel {
+        @extend %flaticons;
+
+        .téléphone p {
+            color: rgb(146, 130, 42);
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        span {
+            margin-top: 5%;
+            font-size: 150%;
+        }
+    }
+
+    .mail1 {
+        @extend %flaticons;
+
+        .email div {
+            color: rgb(146, 130, 42);
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        span {
+            margin-top: 5%;
+            font-size: 150%;
+        }
+    }
+
+    .loc {
+        @extend %flaticons;
+
+        .adresse p { // aligner le flaticon
+            margin: 0;
+        }
+
+        span {
+            margin-top: 5%;
+            font-size: 170%;
+        }
+    }
+}
+
+
+
+/* formulaire */
+
+@media screen and (max-width: 360px) {
+    .formulaire {
+        width: 100px;
+    }
+
+    .Contact {
+        width: 50%;
+    }
+}
+
+.formulaire {
+    width: 400px;
+}
+
+
+
+form {
+    width: 380px;
+    padding-top: 5%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 15% 15% 55% 15%;
+    gap: 25% 5%;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "nom mail2"
+    "telephone sujet"
+    "message message"
+    "btn btn";
+
+    #message { 
+        grid-area: message; 
+    }
+      
+      .nom { 
+        grid-area: nom; 
+    }
+      
+      .mail2 { 
+        grid-area: mail2; 
+    }
+      
+      .telephone { 
+        grid-area: telephone; 
+    }
+      
+      .sujet { 
+        grid-area: sujet; 
+    }
+      
+      .btn { 
+        grid-area: btn; 
+    }
+
+    input, textarea {
+        background-color: rgb(41, 41, 41);
+        height: 175%;
+        border: 0;
+        border-bottom: 1px solid rgb(124, 123, 123);
+        @extend %textgrey;
+    }
+}
+
+textarea#message {
+    color: #BABABA;
+    height: 120%;
+}
+
+input.envoyer {
+    width: 55%;
+    height: 150%;
+    background-color: rgb(146, 130, 42);
+    color: white;
+    font-size: 1.5em;
+
+    &:hover {
+        background-color: rgb(173, 158, 73);
+    }
+}
+  
+  
+
+
+  
+
+/* carte */
+
+#carte {
+    padding: 10% 2% 10% 5%;
+}
+
+iframe {
+    width: 100%;
+    height: 450px;
+    -webkit-filter: grayscale(100%);
+}

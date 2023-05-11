@@ -1,0 +1,84 @@
+// here css of footer 
+
+.footercontenu {
+    margin-left: 20%;
+    padding: auto;
+    background-color: rgb(67, 66, 66);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+
+}
+
+.footercontenuChambre {
+    margin:auto;
+    padding: auto;
+    background-color: rgb(67, 66, 66);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+
+}
+.leftSideFooter {
+    text-align: start;
+    height: 100%;
+    padding: 4%;
+    width: 40%;
+}
+.titreLeftFooter {
+    color: azure;
+    font-size: 2em ;
+    font-weight: lighter;
+}
+.parLeftFooter {
+    width: 80%;
+    font-size: 1.5em;
+    line-height: 18px;
+    color: $colorParagraph;
+}
+.RightSideFooter {
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    justify-content: space-around;
+    align-content: center;
+    background-color:  rgb(67, 66, 66);
+}
+.viber{
+    display: flex;
+    flex-direction: row;
+    color: aliceblue;
+    gap: 2%;
+}
+.imgViber{
+    margin-top: 55%;
+    
+}
+.nomeroRightSide{
+    font-size: 24px;
+    font-weight: lighter;
+    
+}
+.emailRightSide{
+    color: azure;
+    font-size: 2em ;
+    font-weight: lighter;
+}
+hr
+{
+    border: 1px solid goldenrod; 
+    margin-top: -1%;
+}
+
+.imgFooter {
+    height: 20px;
+    width: 20px;
+}
+.lesPetitsImages{
+    display: flex;
+    gap: 5%;
+}
+
